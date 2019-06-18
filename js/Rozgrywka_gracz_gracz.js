@@ -133,7 +133,7 @@ function uderzenie2(){
 				$('#poddanie1').css('margin-top','2%');
 				$('.wave').css('cursor','pointer');
 			
-				//$('#przyciski_gracz1').css('display','none');
+				
 				
 		
 	})
