@@ -14,10 +14,9 @@ function rozpoczecie()
 function uderzenie1(){
 
 	$('#poddanie_gracz2').css('display','none');
-	//$('#poddanie').css('display','block');
 	$('.wave_show').css('cursor','pointer');
 	$('#plansza_gracz2').css('margin-top','-29px');
-	//$('.wave_show').hover.css('backgroundColor','lightgreen');
+	
 	
 	$('.wave_show').click(function(){	
 				if($(this).children().hasClass('jedMasz_2'))
