@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html lang='pl'>
+<head>
+	<meta charset="utf-8"/>
+	<title>Statki</title>
+	<link rel="stylesheet" href="css/style_Gra-z-Komp1.css" type="text/css"/>
+	<script type="text/javascript" src="js/Board_dla_trybu_gracz-gracz.js"></script>
+	<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<script src="js/jquery-3.4.0.min.js"></script>
+		<script type="text/javascript" src="js/RotacjaDwu_1.js" async defer></script>
+		<script type="text/javascript" src="js/RotacjaDwu_2.js" async defer></script>
+		<script type="text/javascript" src="js/RotacjaDwu_3.js" async defer></script>
+		<script type="text/javascript" src="js/Rotacja_pow_Dwu_1.js" async defer></script>
+		<script type="text/javascript" src="js/Rotacja_pow_Dwu_2.js" async defer></script>
+		<script type="text/javascript" src="js/Rotacja_pow_Dwu_3.js" async defer></script>
+		<script type="text/javascript" src="js/RotacjaTroj_1.js" async defer></script>
+		<script type="text/javascript" src="js/RotacjaTroj_2.js" async defer></script>
+		<script type="text/javascript" src="js/Rotacja_pow_Troj_1.js" async defer></script>
+		<script type="text/javascript" src="js/Rotacja_pow_Troj_2.js" async defer></script>
+		<script type="text/javascript" src="js/RotacjaCzter.js" async defer></script>
+		<script type="text/javascript" src="js/Rotacja_pow_Czter.js" async defer></script>
+		<script type="text/javascript" src="js/Drag_and_drop.js" async defer></script>
+		<script type="text/javascript" src="js/Losowanie_czterM.js" async defer></script>
+		<script type="text/javascript" src="js/Losowanie_trojM.js" async deferr></script>
+		<script type="text/javascript" src="js/Losowanie_jedM.js" async defer></script>
+		<script type="text/javascript" src="js/Losowanie_dwuM.js" async defer></script>
+		<script type="text/javascript" src="js/Los_czterom_komp.js" async defer></script>
+		<script type="text/javascript" src="js/Los_trojm_komp.js" async defer></script>
+		<script type="text/javascript" src="js/Los_dwum_komp.js" async defer></script>
+		<script type="text/javascript" src="js/Los_jedn_komp.js" async defer></script>
+		<!--<script type="text/javascript" src="js/Rozgrywka.js" async></script>-->
+		<script type="text/javascript" src="js/Rozmieszczenie_losowe_gracz2.js" async></script>
+		<script type="text/javascript" src="js/resetuj_gracz1.js" async defer></script>
+		<script type="text/javascript" src="js/resetuj_gracz2.js" async defer></script>
+		<script type="text/javascript" src="js/Powrot_do_menu.js" async defer></script>
+		<script type="text/javascript" src="js/Powrot_do_menu_tryb_g2.js" async defer></script>
+		<script type="text/javascript" src="js/Walidacja_statkow_gracz1.js" async defer></script>
+		<script type="text/javascript" src="js/Walidacja_statkow_gracz2.js" async defer></script>
+</head>
+
+<body>
+	<h1>BITWY MORSKIE</h1>
+	<br/>
+	<section id="plansza_gracz1">
+		<div id="info_gracz1" style="text-align:center; color:lightblue;"><b style="color: green"><i>GRACZ_1</i></b> rozkłada swoje statki.</div>
+		<br/>
+		
+		<div id="conteinerOfShips"><h2 style="font-size:15px;">Chwyć i upuść dany statek (lub jego element) na wybrane pole lub skorzystaj z opcji ROZMIESZCZENIE AUTOMATYCZNE.</h2>
+				<div id="pojemnikJ" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag1" class="jedMasz" src ="img/jednomasztowiec.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div id="pojemnikJ" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img id="drag2" class="jedMasz" src ="img/jednomasztowiec.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div id="pojemnikJ" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag3" class="jedMasz" src ="img/jednomasztowiec.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div id="pojemnikJ" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag4" class="jedMasz" src ="img/jednomasztowiec.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				
+				<div style="clear:both;"></div>
+				
+				<div id="pojemnikD1" class="stocznia" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag11" class="dwuMasz" style="left: 0px; " src ="img/dwum_cz1.jpg" draggable="true" ondragstart="drag(event)">
+						<img id="drag12" class="dwuMasz" style="right:0px;" src ="img/dwum_cz2.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				
+				<div id="pojemnikD2" class="stocznia" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag13" class="dwuMasz" src ="img/dwum_cz1.jpg" style="left: 0px;" draggable="true" ondragstart="drag(event)">
+						<img id="drag14" class="dwuMasz" src ="img/dwum_cz2.jpg" style="right: 0px;" draggable="true" ondragstart="drag(event)">
+				</div>
+				
+				<div id="pojemnikD3" class="stocznia" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag15" class="dwuMasz" src ="img/dwum_cz1.jpg" style="left: 0px;" draggable="true" ondragstart="drag(event)">
+						<img id="drag16" class="dwuMasz" src ="img/dwum_cz2.jpg" style="right: 0px;" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div style="clear:both"></div>
+				
+				<div id="pojNaBtn1">
+						<button id="obracanie11" type="button" value="Obróć do pionu">Obróć do pionu</button>
+						<button id="obracanie12" type="button" value="Obróć do poziomu">Obróć do poziomu</button>
+				</div>
+				
+				<div id="pojNaBtn2">
+						<button id="obracanie21" type="button" value="Obróć do pionu">Obróć do pionu</button>
+						<button id="obracanie22" type="button" value="Obróć do pionu">Obróć do poziomu</button>
+				</div>
+				
+				<div id="pojNaBtn3">
+						<button id="obracanie31" type="button" value="Obróć do pionu">Obróć do pionu</button>
+						<button id="obracanie32" type="button" value="Obróć do pionu">Obróć do poziomu</button>
+				</div>
+				
+				<div style="clear:both;"></div>
+				
+				<div id="pojemnikT1" class="trojmasztowiec" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag17" class="trojMasz" src ="img/trojm_cz1.jpg" style="left: 0px;" draggable="true" ondragstart="drag(event)">
+						<div id="pojemnikT11" class="ppoj_trojmasztowiec">
+							<img id="drag18" class="trojMasz" style="right: 0px;" src ="img/trojm_cz2.jpg" draggable="true" ondragstart="drag(event)">
+						</div>
+						<img id="drag19" class="trojMasz" style="right: 0px;" src ="img/trojm_cz3.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				
+				<div id="pojemnikT2" class="trojmasztowiec" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag20" class="trojMasz" src ="img/trojm_cz1.jpg" style="left: 0px;" draggable="true" ondragstart="drag(event)">
+						<div id="pojemnikT21" class="ppoj_trojmasztowiec">
+							<img id="drag21" class="trojMasz" style="right: 0px;" src ="img/trojm_cz2.jpg" draggable="true" ondragstart="drag(event)">
+						</div>
+						<img id="drag22" class="trojMasz" style="right: 0px;"src ="img/trojm_cz3.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div style="clear:both"></div>
+				
+				<div id="pojNaBtn4">
+						<button id="obracanie41" type="button" value="Obróć do pionu">Obróć do pionu</button>
+						<button id="obracanie42"  type="button" value="Obróć do poziomu">Obróć do poziomu</button>
+				</div>
+				
+				<div id="pojNaBtn5">
+						<button id="obracanie51" type="button" value="Obróć do pionu">Obróć do pionu</button>
+						<button id="obracanie52" type="button" value="Obróć do pionu">Obróć do poziomu</button>
+				</div>
+				
+				<div style="clear:both"></div>
+				
+				<div id="pojemnikC1" class="czteromasztowiec" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag23" class="czterMasz" src ="img/czterm_cz1.jpg" style="left: 0px;" draggable="true" ondragstart="drag(event)">
+						<div id="pojemnikC11" class="ppoj_czteromaszt1">
+							<img id="drag24" class="czterMasz" style="right: 0px;" src ="img/czterm_cz2.jpg" draggable="true" ondragstart="drag(event)">
+						</div>
+						<div id="pojemnikC12" class="ppoj_czteromaszt2">
+							<img id="drag25" class="czterMasz" style="right: 0px;" src ="img/czterm_cz3.jpg" draggable="true" ondragstart="drag(event)">
+						</div>
+						<img id="drag26" class="czterMasz" style="right: 0px;"src ="img/czterm_cz4.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div style="clear:both"></div>
+				
+				<div id="pojNaBtn6">
+						<button id="obracanie61" type="button" value="Obróć do pionu">Obróć do pionu</button>
+						<button id="obracanie62" type="button" value="Obróć do poziomu">Obróć do poziomu</button>
+				</div>
+		</div>
+		<div id="conteinerOfFields">
+				<div class="board" id="board-1" ></div>
+				<div style="clear:both;"></div>
+		</div>
+		
+		<!--<div style="clear:both"></div>-->
+		<div id="przyciski_gracz1">
+				<div id="poddaj">
+					<button id="poddanie1" class="button" type="button" value="poddaj">PODDAJ SWOJĄ FLOTĘ</button>
+				</div>
+				<div id="suma">
+					<button id="podsumowanie" class="button" type="button" value="podsumuj">ZATWIERDŹ</button>
+				</div>
+				
+				<div id="losowo">
+					<button id="losowanie" class="button" type="button" value="losuj">ROZMIESZCZENIE AUTOMATYCZNE</button>
+				</div>
+				<div id="reset">
+					<button id="resetuj" class="button" type="button" value="RESET">ZRESETUJ PLANSZĘ</button>
+				</div>
+				<div id="powrot">
+					<button id="powrot_do_menu" class="button" type="button" value="POWRÓT">POWRÓT DO MENU</button>
+				</div>
+		</div>
+				
+		<!--<script type="text/javascript" src="js/Rozgrywka_tryb_gracz_vs_graczjs.js" async defer></script>
+		
+		<!--<script type="text/javascript" src="js/Rozgrywka_tryb_gracz_gracz.js" async></script>-->
+		<!--<script type="text/javascript" src="js/Poddanie.js" async></script>
+		
+		<!--<video class="video" src="img/see.mp4" autoplay="autoplay" loop="loop" muted="muted" sound="muted"></video>-->
+	</section>
+	<section id="plansza_gracz2">
+		<div id="info_gracz2" style="text-align:center; color:lightblue;"><b style="color: green"><i>GRACZ_2</i></b> rozkłada swoje statki.</div>
+		<br/>
+		
+		<div id="conteinerOfShips"><h2 style="font-size:15px;">Chwyć i upuść dany statek (lub jego element) na wybrane pole lub skorzystaj z opcji ROZMIESZCZENIE AUTOMATYCZNE.</h2>
+				<div id="pojemnikJ" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag1" class="jedMasz" src ="img/jednomasztowiec.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div id="pojemnikJ" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img id="drag2" class="jedMasz" src ="img/jednomasztowiec.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div id="pojemnikJ" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag3" class="jedMasz" src ="img/jednomasztowiec.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div id="pojemnikJ" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag4" class="jedMasz" src ="img/jednomasztowiec.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				
+				<div style="clear:both;"></div>
+				
+				<div id="pojemnikD1" class="stocznia" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag11" class="dwuMasz" style="left: 0px; " src ="img/dwum_cz1.jpg" draggable="true" ondragstart="drag(event)">
+						<img id="drag12" class="dwuMasz" style="right:0px;" src ="img/dwum_cz2.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				
+				<div id="pojemnikD2" class="stocznia" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag13" class="dwuMasz" src ="img/dwum_cz1.jpg" style="left: 0px;" draggable="true" ondragstart="drag(event)">
+						<img id="drag14" class="dwuMasz" src ="img/dwum_cz2.jpg" style="right: 0px;" draggable="true" ondragstart="drag(event)">
+				</div>
+				
+				<div id="pojemnikD3" class="stocznia" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag15" class="dwuMasz" src ="img/dwum_cz1.jpg" style="left: 0px;" draggable="true" ondragstart="drag(event)">
+						<img id="drag16" class="dwuMasz" src ="img/dwum_cz2.jpg" style="right: 0px;" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div style="clear:both"></div>
+				
+				<div id="pojNaBtn1">
+						<button id="obracanie11" type="button" value="Obróć do pionu">Obróć do pionu</button>
+						<button id="obracanie12" type="button" value="Obróć do poziomu">Obróć do poziomu</button>
+				</div>
+				
+				<div id="pojNaBtn2">
+						<button id="obracanie21" type="button" value="Obróć do pionu">Obróć do pionu</button>
+						<button id="obracanie22" type="button" value="Obróć do pionu">Obróć do poziomu</button>
+				</div>
+				
+				<div id="pojNaBtn3">
+						<button id="obracanie31" type="button" value="Obróć do pionu">Obróć do pionu</button>
+						<button id="obracanie32" type="button" value="Obróć do pionu">Obróć do poziomu</button>
+				</div>
+				
+				<div style="clear:both;"></div>
+				
+				<div id="pojemnikT1" class="trojmasztowiec" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag17" class="trojMasz" src ="img/trojm_cz1.jpg" style="left: 0px;" draggable="true" ondragstart="drag(event)">
+						<div id="pojemnikT11" class="ppoj_trojmasztowiec">
+							<img id="drag18" class="trojMasz" style="right: 0px;" src ="img/trojm_cz2.jpg" draggable="true" ondragstart="drag(event)">
+						</div>
+						<img id="drag19" class="trojMasz" style="right: 0px;" src ="img/trojm_cz3.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				
+				<div id="pojemnikT2" class="trojmasztowiec" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag20" class="trojMasz" src ="img/trojm_cz1.jpg" style="left: 0px;" draggable="true" ondragstart="drag(event)">
+						<div id="pojemnikT21" class="ppoj_trojmasztowiec">
+							<img id="drag21" class="trojMasz" style="right: 0px;" src ="img/trojm_cz2.jpg" draggable="true" ondragstart="drag(event)">
+						</div>
+						<img id="drag22" class="trojMasz" style="right: 0px;"src ="img/trojm_cz3.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div style="clear:both"></div>
+				
+				<div id="pojNaBtn4">
+						<button id="obracanie41" type="button" value="Obróć do pionu">Obróć do pionu</button>
+						<button id="obracanie42"  type="button" value="Obróć do poziomu">Obróć do poziomu</button>
+				</div>
+				
+				<div id="pojNaBtn5">
+						<button id="obracanie51" type="button" value="Obróć do pionu">Obróć do pionu</button>
+						<button id="obracanie52" type="button" value="Obróć do pionu">Obróć do poziomu</button>
+				</div>
+				
+				<div style="clear:both"></div>
+				
+				<div id="pojemnikC1" class="czteromasztowiec" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="drag23" class="czterMasz" src ="img/czterm_cz1.jpg" style="left: 0px;" draggable="true" ondragstart="drag(event)">
+						<div id="pojemnikC11" class="ppoj_czteromaszt1">
+							<img id="drag24" class="czterMasz" style="right: 0px;" src ="img/czterm_cz2.jpg" draggable="true" ondragstart="drag(event)">
+						</div>
+						<div id="pojemnikC12" class="ppoj_czteromaszt2">
+							<img id="drag25" class="czterMasz" style="right: 0px;" src ="img/czterm_cz3.jpg" draggable="true" ondragstart="drag(event)">
+						</div>
+						<img id="drag26" class="czterMasz" style="right: 0px;"src ="img/czterm_cz4.jpg" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div style="clear:both"></div>
+				
+				<div id="pojNaBtn6">
+						<button id="obracanie61" type="button" value="Obróć do pionu">Obróć do pionu</button>
+						<button id="obracanie62" type="button" value="Obróć do poziomu">Obróć do poziomu</button>
+				</div>
+		</div>
+		<div id="conteinerOfFields">
+				<div class="board" id="board-2" ></div>
+				<div style="clear:both;"></div>
+		</div>
+		
+		<div id="przyciski_gracz2">
+				<div id="poddaj">
+					<button id="poddanie_gracz2" class="button" type="button" value="poddaj">PODDAJ SWOJĄ FLOTĘ</button>
+				</div>
+				<div id="suma">
+					<button id="podsumowanie_gracz2" class="button" type="button" value="podsumuj">ZATWIERDŹ</button>
+				</div>
+				
+				<div id="losowo">
+					<button id="losowanie_gracz2" class="button" type="button" value="losuj">ROZMIESZCZENIE AUTOMATYCZNE</button>
+				</div>
+				<div id="reset2">
+					<button id="resetuj_gracz2" class="button" type="button" value="RESET">ZRESETUJ PLANSZĘ</button>
+				</div>
+				<div id="powrot">
+					<button id="powrot_do_menu2" class="button" type="button" value="POWRÓT">POWRÓT DO MENU</button>
+				</div>
+		</div>
+		
+		
+		<!--<script type="text/javascript" src="js/Rozgrywka_tryb_gracz_vs_graczjs.js" async defer></script>
+		
+		<!--<script type="text/javascript" src="js/Rozgrywka_tryb_gracz_gracz.js" async></script>-->
+		<!--<script type="text/javascript" src="js/Poddanie.js" async></script>
+		
+		<!--<video class="video" src="img/see.mp4" autoplay="autoplay" loop="loop" muted="muted" sound="muted"></video>-->
+	</section>
+	
+</body>
+</html>

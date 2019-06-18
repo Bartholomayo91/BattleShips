@@ -1,0 +1,390 @@
+body
+{
+	background-color:rgb(00,80,80);
+	color: black;
+	font-size: 28px;
+	font-family: 'Inconsolata', monospace;
+	font-weight: 700;
+}
+.video 
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1000;
+	
+}
+
+#conteinerOfFields
+{
+	width: 500px;
+	margin-left:1%;
+	margin-right:auto;
+	float:left;
+}
+#conteinerOfShips
+{
+	width: 450px;
+	margin-left:18%;
+	margin-right:auto;
+	float:left;
+}
+h1
+{
+	text-align:center;
+	color: darkblue;
+	
+}
+h2
+{
+	text-align:center;
+	color: darkblue;
+	
+}
+#plansza_gracz2
+{ display:none;}
+
+#board-1
+{
+	float:left;
+	width:600px;
+	text-align:center;
+	min-height:450px;
+	/*margin-left:auto;
+	margin-right:auto;*/
+	
+}
+#board-2
+{
+	
+	float:left;
+	width:600px;
+	text-align:center;
+	min-height:450px;
+	
+		
+}
+.wave
+{
+	width:50px;
+	height:50px;
+	text-align:center;
+	/*padding:4px;*/
+	margin:1px;
+	position:relative;
+	border:2px solid gray;
+	float:left;
+	border-color:black;
+	border-radius:5px;
+	overflow:hidden;
+	background-color:lightblue;
+	
+	
+}
+
+.wave_show
+{
+	width:50px;
+	height:50px;
+	text-align:center;
+	/*padding:4px;*/
+	margin:1px;
+	position:relative;
+	border:2px solid gray;
+	float:left;
+	border-color:black;
+	border-radius:5px;
+	overflow:hidden;
+	background-color:lightblue;
+	
+}
+/*
+.wave_show:hover{
+	cursor:pointer;
+	background-color:#008000;
+}
+*/
+#navi_a1
+{
+	margin-left:30px;
+}
+#navi_a2
+{
+	margin-left:125px;
+}
+
+#przyciski_gracz1
+{	float:left;}
+
+#pojemnikJ1
+{ margin-left:120px;}
+
+.pojemnikJ
+{	float:left;
+border:solid;  border-radius:10px; width:50px; height:50px; position:relative; overflow:hidden; margin-bottom:1px;margin-right:20px; margin-left:5px;}
+
+.pojemnikJ:hover
+{ cursor:pointer;}
+
+.trojmasztowiec
+{	float:left; border:solid;  border-radius:10px; width:150px; height:50px;  margin-right:auto; position:relative; overflow:hidden; margin-right:1px; margin-top:5%;}
+
+.trojmasztowiec:hover
+{ cursor:pointer;}
+
+.ppoj_trojmasztowiec
+{ margin-left:50px; width:50px; height:50px; float:left; position:relative;}
+
+.ppoj_trojmasztowiec:hover
+{ cursor:pointer;}
+
+.czteromasztowiec
+{	float:left; border:solid; border-radius:10px; width:200px;  height:50px;  margin-right:auto; position:relative; overflow:hidden; margin-top:5%;}
+
+.czteromasztowiec:hover
+{ cursor:pointer;}
+
+.ppoj_czteromaszt1
+{ margin-left:50px; width:50px; height:50px; float:left; position:relative;}
+
+.ppoj_czteromaszt2
+{ margin-left:100px; bottom:50px; width:50px; height:50px; float:left; position:relative;}
+
+.ppoj_czteromaszt:hover
+{ cursor:pointer;}
+
+.stocznia
+{	float:left; border:solid; border-radius:10px; width:100px;  height:50px;  margin-right:auto; position:relative; overflow:hidden; margin-right:1px; margin-top:5%;}
+
+.stocznia:hover
+{ cursor:pointer;}
+
+.jedMasz
+{	width:50px; position:absolute; left:0px;}
+
+.dwuMasz
+{	width: 50px; position:absolute;}
+
+.trojMasz
+{	width: 50px; position:absolute;}
+
+.czterMasz
+{	width: 50px; position:absolute; float:left;}
+
+button
+{	padding-left:1px; padding-right:1px; padding-top:3px; padding-bottom:3px;font-size:10px; width:100px; display:block; margin-bottom:1px; border-radius:5px; background-color:lightblue; border: solid 2px darkgblue;}
+
+button:hover
+{	cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green;}
+	
+#pojNaBtn1
+{	float:left; padding-right:5px; margin-left:4px; margin-top:5%;}
+/*
+#pojNaBtn2
+{	float:left;padding-right:5px;margin-left:3px;}
+
+#pojNaBtn3
+{	float:left;}
+#pojNaBtn5
+{	float:left; padding-right:5px; margin-left:45px;}
+*/
+#pojNaBtn4
+{	float:left; padding-right:5px; margin-left:4px;margin-top:5%;}
+
+
+
+#pojNaBtn6
+{	float:left; padding-right:5px; margin-left:4px;margin-top:5%;}
+
+.button
+{	 border-radius:5px; padding-right:5px; margin-left:50%; background-color:lightblue; width:150px;font-size:15px;margin-bottom:10px}
+
+.button:hover
+{	cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green; }
+/*
+#podsumowanie
+{	 border-radius:5px; padding-right:5px; padding-bottom:5px; margin-bottom:10px; margin-left:39%; background-color:lightblue; text-decoration:underline; width:150px; font-size:18px;}
+#podsumowanie:hover
+{	 cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green; }
+#losowanie
+{	 border-radius:5px; padding-right:5px; margin-left:39%; background-color:lightblue; width:150px;font-size:15px;margin-bottom:10px;}
+#losowanie:hover
+{	 cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green;}
+#resetuj
+{	 border-radius:5px; padding-right:5px; margin-left:39%; background-color:lightblue; width:150px;font-size:15px;margin-bottom:10px;}
+#resetuj:hover
+{	 cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green;}
+*/
+
+#poddanie
+{   display:none; border-radius:5px; padding-right:5px; background-color:lightblue; margin-right:auto; margin-left:auto; width:150px;font-size:15px;margin-bottom:10px;}
+#poddanie:hover
+{	cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green;}
+
+#poddanie1
+{   display:none; border-radius:5px; padding-right:5px; background-color:lightblue; margin-right:auto; margin-left:auto; width:150px;font-size:15px;margin-bottom:10px;}
+#poddanie1:hover
+{	cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green;}
+
+#poddanie_gracz2
+{   display:none; border-radius:5px; padding-right:5px; background-color:lightblue; margin-right:auto; margin-left:auto; width:150px;font-size:15px;margin-bottom:10px;}
+#poddanie_gracz2:hover
+{	cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green;}
+/*
+#powrot_do_menu
+{   border-radius:5px; padding-right:5px; margin-left:39%; background-color:lightblue; width:150px;font-size:15px;margin-bottom:10px;}
+#powrot_do_menu:hover
+{	cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green;}
+*/
+.confirm
+{ border-radius:5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#conteinerOfFields2
+{
+	width: 500px;
+	margin-left:1%;
+	margin-right:auto;
+	float:left;
+}
+#conteinerOfShips2
+{
+	width: 450px;
+	margin-left:18%;
+	margin-right:auto;
+	float:left;
+}
+
+
+#navi_a1
+{
+	margin-left:30px;
+}
+#navi_a2
+{
+	margin-left:125px;
+}
+
+#przyciski_gracz2
+{	float:left;}
+
+#pojemnikJ1_2
+{ margin-left:120px;}
+
+.pojemnikJ_2
+{	float:left;
+border:solid;  border-radius:10px; width:50px; height:50px; position:relative; overflow:hidden; margin-bottom:1px;margin-right:20px; margin-left:5px;}
+
+.pojemnikJ_2:hover
+{ cursor:pointer;}
+
+.trojmasztowiec_2
+{	float:left; /*border:solid;  border-radius:5px;*/ width:150px; height:50px;  margin-right:auto; position:relative; overflow:hidden; margin-right:1px; margin-top:5%;}
+
+.trojmasztowiec_2:hover
+{ cursor:pointer;}
+
+.ppoj_trojmasztowiec_2
+{ margin-left:50px; width:50px; height:50px; float:left; position:relative;}
+
+.ppoj_trojmasztowiec_2:hover
+{ cursor:pointer;}
+
+.czteromasztowiec_2
+{	float:left; /*border:solid; border-radius:5px; */width:200px;  height:50px;  margin-right:auto; position:relative; overflow:hidden; margin-top:5%;}
+
+.czteromasztowiec_2:hover
+{ cursor:pointer;}
+
+.ppoj_czteromaszt1_2
+{ margin-left:50px; width:50px; height:50px; float:left; position:relative;}
+
+.ppoj_czteromaszt2_2
+{ margin-left:100px; bottom:50px; width:50px; height:50px; float:left; position:relative;}
+
+.ppoj_czteromaszt_2:hover
+{ cursor:pointer;}
+
+.stocznia_2
+{	float:left; /*border:solid; border-radius:5px;*/ width:100px;  height:50px;  margin-right:auto; position:relative; overflow:hidden; margin-right:1px; margin-top:5%;}
+
+.stocznia_2:hover
+{ cursor:pointer;}
+
+.jedMasz_2
+{	width:50px; position:absolute; left:0px;}
+
+.dwuMasz_2
+{	width: 50px; position:absolute;}
+
+.trojMasz_2
+{	width: 50px; position:absolute;}
+
+.czterMasz_2
+{	width: 50px; position:absolute; float:left;}
+
+button
+{	padding-left:1px; padding-right:1px; padding-top:3px; padding-bottom:3px;font-size:10px; width:100px; display:block; margin-bottom:1px; border-radius:5px; background-color:lightblue; border: darkgblue;}
+
+button:hover
+{	cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green;}
+	
+#pojNaBtn1_2
+{	float:left; padding-right:5px; margin-left:4px; margin-top:5%;}
+/*
+#pojNaBtn2
+{	float:left;padding-right:5px;margin-left:3px;}
+
+#pojNaBtn3
+{	float:left;}
+#pojNaBtn5
+{	float:left; padding-right:5px; margin-left:45px;}
+*/
+#pojNaBtn4_2
+{	float:left; padding-right:5px; margin-left:4px;margin-top:5%;}
+
+
+
+#pojNaBtn6_2
+{	float:left; padding-right:5px; margin-left:4px;margin-top:5%;}
+
+.button_2
+{	 border-radius:5px; padding-right:5px; margin-left:39%; background-color:lightblue; width:150px;font-size:15px;margin-bottom:10px}
+
+.button_2:hover
+{	cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green; }
+/*
+#podsumowanie
+{	 border-radius:5px; padding-right:5px; padding-bottom:5px; margin-bottom:10px; margin-left:39%; background-color:lightblue; text-decoration:underline; width:150px; font-size:18px;}
+#podsumowanie:hover
+{	 cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green; }
+#losowanie
+{	 border-radius:5px; padding-right:5px; margin-left:39%; background-color:lightblue; width:150px;font-size:15px;margin-bottom:10px;}
+#losowanie:hover
+{	 cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green;}
+#resetuj
+{	 border-radius:5px; padding-right:5px; margin-left:39%; background-color:lightblue; width:150px;font-size:15px;margin-bottom:10px;}
+#resetuj:hover
+{	 cursor:pointer; transform:scale(1.05); transition:0.1s; background-color:green;}
+*/
+
+
+
+
