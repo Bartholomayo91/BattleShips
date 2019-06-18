@@ -59,7 +59,7 @@ function uderzenie1(){
 						{
 							alert("GRACZ_1 - WYGRAŁEŚ!!!");
 							location.href='index.html';
-							//break;
+							
 						}
 						
 				//alert("TERAZ KOLEJ GRACZA_2");
