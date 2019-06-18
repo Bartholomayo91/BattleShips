@@ -82,7 +82,7 @@ function uderzenie2(){
 		$('.wave').click(function(){
 				if($(this).children().hasClass('jedMasz'))
 				{
-					//$(this).click=null;
+					
 						alert("Trafiłes jednomasztowca!");
 						$(this).html('<img class="trafiony1" src="img/Trafiony_jednomasztowiec.jpg">');
 						//$(this).click=null;
