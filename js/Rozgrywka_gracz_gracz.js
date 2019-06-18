@@ -120,7 +120,7 @@ function uderzenie2(){
 						{
 							alert("GRACZ_2 - WYGRAŁEŚ!!!");
 							location.href='index.html';
-							//break;
+							
 						}
 						
 				//alert("TERAZ KOLEJ GRACZA_1");
@@ -132,9 +132,7 @@ function uderzenie2(){
 				$('#poddanie1').css('margin-left','50%');
 				$('#poddanie1').css('margin-top','2%');
 				$('.wave').css('cursor','pointer');
-			
-				
-				
+	
 		
 	})
 };
