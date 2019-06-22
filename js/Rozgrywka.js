@@ -3,8 +3,8 @@ var licznik_gracza=0;
 var licznik_komputera=0;
 var tablica_trafionych_komp =[];
 var tablica_trafionych_gracz =[];
-const min=1;
-const max=100;	
+var min=1;
+var max=100;	
 $('.wave_show').click(function(){
 		
 						
@@ -59,15 +59,65 @@ $('.wave_show').click(function(){
 	}).click(function(){
 		
 //------------------STRZAŁ KOMPUTERA----------------------------------------
-		
+	let zmienna_traf_dwum = 1;
+	let Trafiony_dwumasztowiec=[];
+	var tab_sprawdzen_dla_dwumasztowca=[];
 		do
 		{
+			if(Trafiony_dwumasztowiec[0]==1)
+			{
+				switch(wylosowane_pole){
+					case 1:		
+								tab_sprawdzen_dla_dwumasztowca.push(wylosowane_pole+2,wylosowane_pole+20)
+								if(tab_sprawdzen_dla_dwumasztowca[0].has('#trafiony'))
+								{
+									wylosowane_pole=wylosowane_pole+10;
+									sprawdzenie=tablica_trafionych_komp.some(function(itm)
+											{
+												return itm===wylosowane_pole;
+											});
+								}else
+								{
+									wylosowane_pole=wylosowane_pole+1;
+									sprawdzenie=tablica_trafionych_komp.some(function(itm)
+											{
+												return itm===wylosowane_pole;
+											});
+								}
+								
+					break;
+					
+					case 2:		
+								tab_sprawdzen_dla_dwumasztowca.push(wylosowane_pole+2,wylosowane_pole+12,wylosowane_pole+19, wylosowane_pole+20,wylosowane_pole+21)
+								if(tab_sprawdzen_dla_dwumasztowca[0].has('#trafiony'))
+								{
+									wylosowane_pole=wylosowane_pole+10;
+									sprawdzenie=tablica_trafionych_komp.some(function(itm)
+											{
+												return itm===wylosowane_pole;
+											});
+								}else if(tab_sprawdzen_dla_dwumasztowca[1].has('#trafiony'))
+								{
+									wylosowane_pole=wylosowane_pole+1;
+									sprawdzenie=tablica_trafionych_komp.some(function(itm)
+											{
+												return itm===wylosowane_pole;
+											});
+								}
+									
+					break;
+				
+				
+				
+			}else
+			{
 			var wylosowane_pole= Math.floor(Math.random()*(max-min+1))+min;
 			tablica_trafionych_komp.sort();
 			var sprawdzenie=tablica_trafionych_komp.some(function(itm)
 					{
 						return itm===wylosowane_pole;
 					});
+			}
 		}
 		while(sprawdzenie);
 		//}
@@ -81,7 +131,7 @@ $('.wave_show').click(function(){
 		if(trafiony_font.children().hasClass('jedMasz'))
 		{
 				alert("Trafiono Twój jednomasztowiec!");
-				$('#font'+wylosowane_pole).html('<img id="trafiony1" src="img/Trafiony_jednomasztowiec.jpg">');
+				$('#font'+wylosowane_pole).html('<img id="trafiony" src="img/Trafiony_jednomasztowiec.jpg">');
 				licznik_komputera++;
 				
 				
@@ -146,22 +196,22 @@ $('.wave_show').click(function(){
 		else if(trafiony_font.children().hasClass('dwuMasz'))
 		{
 				alert("Trafiono Twój dwumasztowiec!");
-				$('#font'+wylosowane_pole).html('<img id="trafiony2" src="img/Trafiony_dwumasztowiec.jpg">');
+				$('#font'+wylosowane_pole).html('<img id="trafiony" src="img/Trafiony_dwumasztowiec.jpg">');
 				licznik_komputera++;
-				//trafiony_dwumasztowiec=true;
+				trafiony_dwumasztowiec.push(zmienna_traf_dwum);
 				
 				
 		}
 		else if(trafiony_font.children().hasClass('trojMasz'))
 		{
 				alert("Trafiono Twój trojmasztowiec!");
-				$('#font'+wylosowane_pole).html('<img id="trafiony3" src="img/Trafiony_trojmasztowiec.jpg">');
+				$('#font'+wylosowane_pole).html('<img id="trafiony" src="img/Trafiony_trojmasztowiec.jpg">');
 				licznik_komputera++;
 		}
 		else if(trafiony_font.children().hasClass('czterMasz'))
 		{
 				alert("Trafiono Twój czteromasztowiec!");
-				$('#font'+wylosowane_pole).html('<img id="trafiony4" src="img/Trafiony_czteromasztowiec.jpg">');
+				$('#font'+wylosowane_pole).html('<img id="trafiony" src="img/Trafiony_czteromasztowiec.jpg">');
 				licznik_komputera++;
 		}
 		else

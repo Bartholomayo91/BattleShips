@@ -161,7 +161,6 @@ function poddanieGracz2(){
 						alert('DO STU DIABŁÓW! FLOTA GRACZa_2 ZATONĘŁA!...WYGRYWA GRACZ_2!');
 						location.href='index.html';
 					}
-			
 	})			
 };
 
