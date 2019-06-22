@@ -1,6 +1,7 @@
 var btnLosuj=document.getElementById("losowanie");
 function Losowanie_poprawione()
 {
+	//komentarz testowy
 	const min=1;
 	const max=100;
 	
