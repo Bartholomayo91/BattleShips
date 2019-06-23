@@ -19,11 +19,17 @@ function uderzenie1(){
 	
 	
 	$('.wave_show').click(function(){	
-				if($(this).children().hasClass('jedMasz_2'))
+				if(($(this).children().hasClass('trafiony'))||($(this).children().hasClass('spudlowanie')))
+						{
+							alert("Już strzelałeś w te pole! Wybierz inne.");
+							null.dummy;
+							
+						}
+				else if($(this).children().hasClass('jedMasz_2'))
 				{
 					//$(this).click=null;
 						alert("Trafiłes jednomasztowca!");
-						$(this).html('<img class="trafiony1" src="img/Trafiony_jednomasztowiec.jpg">');
+						$(this).html('<img class="trafiony" src="img/Trafiony_jednomasztowiec.jpg">');
 						//$(uderzenie_gracz1).click=null;
 						licznik_gracza1++;
 						//alert(licznik_gracza1);
@@ -31,27 +37,27 @@ function uderzenie1(){
 				else if($(this).children().hasClass('dwuMasz_2'))
 				{
 						alert("Trafiłes dwumasztowca!");
-						$(this).html('<img class="trafiony2" src="img/Trafiony_dwumasztowiec.jpg">');
+						$(this).html('<img class="trafiony" src="img/Trafiony_dwumasztowiec.jpg">');
 						licznik_gracza1++;
 						//alert(licznik_gracza1);
 				}
 				else if($(this).children().hasClass('trojMasz_2'))
 				{
 						alert("Trafiłes trójmasztowca!");
-						$(this).html('<img class="trafiony3" src="img/Trafiony_trojmasztowiec.jpg">');
+						$(this).html('<img class="trafiony" src="img/Trafiony_trojmasztowiec.jpg">');
 						licznik_gracza1++;
 						//alert(licznik_gracza1);
 				}
 				else if($(this).children().hasClass('czterMasz_2'))
 				{
 						alert("Trafiłes czteromasztowca!");
-						$(this).html('<img class="trafiony4" src="img/Trafiony_czteromasztowiec.jpg">');
+						$(this).html('<img class="trafiony" src="img/Trafiony_czteromasztowiec.jpg">');
 						licznik_gracza1++;
 						//alert(licznik_gracza1);
 				}
 				else
 				{
-					$(this).html('<img id="pudlo" src="img/pudlo.jpg">');
+					$(this).html('<img class="spudlowanie" id="pudlo" src="img/pudlo.jpg">');
 					alert("PUDŁO!!!");
 				}
 				
@@ -80,11 +86,17 @@ function uderzenie1(){
 
 function uderzenie2(){
 		$('.wave').click(function(){
+			if(($(this).children().hasClass('trafiony'))||($(this).children().hasClass('spudlowanie')))
+						{
+							alert("Już strzelałeś w te pole! Wybierz inne.");
+							null.dummy;
+							
+						}
 				if($(this).children().hasClass('jedMasz'))
 				{
 					
 						alert("Trafiłes jednomasztowca!");
-						$(this).html('<img class="trafiony1" src="img/Trafiony_jednomasztowiec.jpg">');
+						$(this).html('<img class="trafiony" src="img/Trafiony_jednomasztowiec.jpg">');
 						//$(this).click=null;
 						licznik_gracza2++;
 						//alert(licznik_gracza1);
@@ -92,27 +104,27 @@ function uderzenie2(){
 				else if($(this).children().hasClass('dwuMasz'))
 				{
 						alert("Trafiłes dwumasztowca!");
-						$(this).html('<img class="trafiony2" src="img/Trafiony_dwumasztowiec.jpg">');
+						$(this).html('<img class="trafiony" src="img/Trafiony_dwumasztowiec.jpg">');
 						licznik_gracza2++;
 						//alert(licznik_gracza1);
 				}
 				else if($(this).children().hasClass('trojMasz'))
 				{
 						alert("Trafiłes trójmasztowca!");
-						$(this).html('<img class="trafiony3" src="img/Trafiony_trojmasztowiec.jpg">');
+						$(this).html('<img class="trafiony" src="img/Trafiony_trojmasztowiec.jpg">');
 						licznik_gracza2++;
 						//alert(licznik_gracza1);
 				}
 				else if($(this).children().hasClass('czterMasz'))
 				{
 						alert("Trafiłes czteromasztowca!");
-						$(this).html('<img class="trafiony4" src="img/Trafiony_czteromasztowiec.jpg">');
+						$(this).html('<img class="trafiony" src="img/Trafiony_czteromasztowiec.jpg">');
 						licznik_gracza2++;
 						//alert(licznik_gracza1);
 				}
 				else
 				{
-					$(this).html('<img id="pudlo" src="img/pudlo.jpg">');
+					$(this).html('<img class="spudlowanie" id="pudlo" src="img/pudlo.jpg">');
 					alert("PUDŁO!!!");
 				}
 				

@@ -10,14 +10,20 @@ const min=1;
 const max=100;	
 
 $('.wave_show').click(function(){
-		
-						
-			if($(this).children().hasClass('jedMasz'))
+	//alert($(this));		
+			if(($(this).children().hasClass('trafiony'))($(this).children().hasClass('spudlowanie')))
+			{
+				alert("Już strzelałeś w te pole! Wybierz inne.");
+				null.dummy;
+				
+			}
+			
+			else if($(this).children().hasClass('jedMasz'))
 			{
 				//$(this).click=null;
 					alert("Trafiłes jednomasztowca!");
-					$(this).html('<img class="trafiony1" src="img/Trafiony_jednomasztowiec.jpg">');
-					$(this).click=null;
+					$(this).html('<img class="trafiony" src="img/Trafiony_jednomasztowiec.jpg">');
+					$(this).click(function(){null});
 					licznik_gracza++;
 					tablica_trafionych_gracz.push($(this));
 					//alert(licznik_gracza);
@@ -25,32 +31,35 @@ $('.wave_show').click(function(){
 			else if($(this).children().hasClass('dwuMasz'))
 			{
 					alert("Trafiłes dwumasztowca!");
-					$(this).html('<img class="trafiony2" src="img/Trafiony_dwumasztowiec.jpg">');
+					$(this).html('<img class="trafiony" src="img/Trafiony_dwumasztowiec.jpg">');
 					licznik_gracza++;
+					$(this).click(function(){null});
 					tablica_trafionych_gracz.push($(this));
 					//alert(licznik_gracza);
 			}
 			else if($(this).children().hasClass('trojMasz'))
 			{
 					alert("Trafiłes trójmasztowca!");
-					$(this).html('<img class="trafiony3" src="img/Trafiony_trojmasztowiec.jpg">');
+					$(this).html('<img class="trafiony" src="img/Trafiony_trojmasztowiec.jpg">');
 					licznik_gracza++;
+					$(this).click(function(){null});
 					tablica_trafionych_gracz.push($(this));
 					//alert(licznik_gracza);
 			}
 			else if($(this).children().hasClass('czterMasz'))
 			{
 					alert("Trafiłes czteromasztowca!");
-					$(this).html('<img class="trafiony4" src="img/Trafiony_czteromasztowiec.jpg">');
+					$(this).html('<img class="trafiony" src="img/Trafiony_czteromasztowiec.jpg">');
 					licznik_gracza++;
+					$(this).click(function(){null});
 					tablica_trafionych_gracz.push($(this));
 					//alert(licznik_gracza);
-			}
-			else
+			}else
 			{
-				$(this).html('<img id="pudlo" src="img/pudlo.jpg">');
+				$(this).html('<img class="spudlowanie" id="pudlo" src="img/pudlo.jpg">');
 				tablica_trafionych_gracz.push($(this));
 			}
+			
 			
 			if(licznik_gracza==20)
 					{

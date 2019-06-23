@@ -3,16 +3,23 @@ var licznik_gracza=0;
 var licznik_komputera=0;
 var tablica_trafionych_komp =[];
 var tablica_trafionych_gracz =[];
+var tablica_wybranych_pol =[];
 var min=1;
 var max=100;	
 $('.wave_show').click(function(){
-		
-						
+	var pole="font"+$(this);
+	tablica_wybranych_pol.push(pole);
+	for(i=0;i<tablica_wybranych_pol.length;i++)
+	{
+	var wybrane_pole=tablica_wybranych_pol[i];
+	alert(wybrane_pole);	
+	}
+	alert($(this));					
 			if($(this).children().hasClass('jedMasz'))
 			{
 				//$(this).click=null;
 					alert("Trafiłes jednomasztowca!");
-					$(this).html('<img class="trafiony1" src="img/Trafiony_jednomasztowiec.jpg">');
+					$(this).html('<img class="trafiony" src="img/Trafiony_jednomasztowiec.jpg">');
 					$(this).click=null;
 					licznik_gracza++;
 					tablica_trafionych_gracz.push($(this));
@@ -21,7 +28,7 @@ $('.wave_show').click(function(){
 			else if($(this).children().hasClass('dwuMasz'))
 			{
 					alert("Trafiłes dwumasztowca!");
-					$(this).html('<img class="trafiony2" src="img/Trafiony_dwumasztowiec.jpg">');
+					$(this).html('<img class="trafiony" src="img/Trafiony_dwumasztowiec.jpg">');
 					licznik_gracza++;
 					tablica_trafionych_gracz.push($(this));
 					//alert(licznik_gracza);
@@ -29,7 +36,7 @@ $('.wave_show').click(function(){
 			else if($(this).children().hasClass('trojMasz'))
 			{
 					alert("Trafiłes trójmasztowca!");
-					$(this).html('<img class="trafiony3" src="img/Trafiony_trojmasztowiec.jpg">');
+					$(this).html('<img class="trafiony" src="img/Trafiony_trojmasztowiec.jpg">');
 					licznik_gracza++;
 					tablica_trafionych_gracz.push($(this));
 					//alert(licznik_gracza);
@@ -37,12 +44,12 @@ $('.wave_show').click(function(){
 			else if($(this).children().hasClass('czterMasz'))
 			{
 					alert("Trafiłes czteromasztowca!");
-					$(this).html('<img class="trafiony4" src="img/Trafiony_czteromasztowiec.jpg">');
+					$(this).html('<img class="trafiony" src="img/Trafiony_czteromasztowiec.jpg">');
 					licznik_gracza++;
 					tablica_trafionych_gracz.push($(this));
 					//alert(licznik_gracza);
 			}
-			else
+			else if(!($(this).children().hasClass('trafiony')))
 			{
 				$(this).html('<img id="pudlo" src="img/pudlo.jpg">');
 				tablica_trafionych_gracz.push($(this));
