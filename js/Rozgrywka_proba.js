@@ -11,7 +11,7 @@ const max=100;
 
 $('.wave_show').click(function(){
 	//alert($(this));		
-			if(($(this).children().hasClass('trafiony'))($(this).children().hasClass('spudlowanie')))
+			if(($(this).children().hasClass('trafiony'))||($(this).children().hasClass('spudlowanie')))
 			{
 				alert("Już strzelałeś w te pole! Wybierz inne.");
 				null.dummy;
