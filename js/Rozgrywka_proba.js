@@ -8,6 +8,7 @@ var tablica_trafionych_komp =[];
 var tablica_trafionych_gracz =[];
 var flaga_dwumasztowca;
 var inne_pole=false;
+var wylosowane_pole;
 const min=1;
 const max=100;	
 
@@ -81,11 +82,12 @@ const max=100;
 								
 								
 				//------------------STRZAŁ KOMPUTERA---------------------------------------------------------------------------				
-								
+								setTimeout(function(){
 								do
 								{	
 									if(flaga_dwumasztowca==true)
 									{
+										alert("w ifie, gdy flaga dwumasztowa jest true "+wylosowane_pole);
 										switch(wylosowane_pole){
 											case 1:
 													//tab_sprawdzen_dla_dwumasztowca.push(wylosowane_pole+2,wylosowane_pole+20)
@@ -128,8 +130,7 @@ const max=100;
 																								return itm===wylosowane_pole;
 																							});
 																		}
-																									
-															
+														
 														}
 														
 											break;
@@ -138,7 +139,7 @@ const max=100;
 											}
 									}
 									else{
-														var wylosowane_pole= Math.floor(Math.random()*(max-min+1))+min;
+														wylosowane_pole= Math.floor(Math.random()*(max-min+1))+min;
 														tablica_trafionych_komp.sort();
 														var sprawdzenie=tablica_trafionych_komp.some(function(itm)
 																{
@@ -149,7 +150,7 @@ const max=100;
 								while(sprawdzenie);
 								//}
 								
-								alert("Elementy już w tablicy: "+tablica_trafionych_komp);
+								//alert("Elementy już w tablicy: "+tablica_trafionych_komp);
 								//alert("Wylosowany nr po sprawdzeniu w tablicy: "+wylosowane_pole);
 								var trafiony_font = $('#font'+wylosowane_pole);
 								tablica_trafionych_komp.push(wylosowane_pole);
@@ -253,6 +254,7 @@ const max=100;
 									location.href='index.html';
 									//break;
 								}
+							},1000);
 							
 						}	
 				
