@@ -1,7 +1,7 @@
 $(document).ready(function(){
 var licznik_gracza=0;
 var licznik_komputera=0;
-var tablica_trafionych_komp =[];
+var tablica_strzalow_komp =[];
 var tablica_trafionych_gracz =[];
 var tablica_wybranych_pol =[];
 var min=1;
@@ -79,14 +79,14 @@ $('.wave_show').click(function(){
 								if(tab_sprawdzen_dla_dwumasztowca[0].has('#trafiony'))
 								{
 									wylosowane_pole=wylosowane_pole+10;
-									sprawdzenie=tablica_trafionych_komp.some(function(itm)
+									sprawdzenie=tablica_strzalow_komp.some(function(itm)
 											{
 												return itm===wylosowane_pole;
 											});
 								}else
 								{
 									wylosowane_pole=wylosowane_pole+1;
-									sprawdzenie=tablica_trafionych_komp.some(function(itm)
+									sprawdzenie=tablica_strzalow_komp.some(function(itm)
 											{
 												return itm===wylosowane_pole;
 											});
@@ -99,14 +99,14 @@ $('.wave_show').click(function(){
 								if(tab_sprawdzen_dla_dwumasztowca[0].has('#trafiony'))
 								{
 									wylosowane_pole=wylosowane_pole+10;
-									sprawdzenie=tablica_trafionych_komp.some(function(itm)
+									sprawdzenie=tablica_strzalow_komp.some(function(itm)
 											{
 												return itm===wylosowane_pole;
 											});
 								}else if(tab_sprawdzen_dla_dwumasztowca[1].has('#trafiony'))
 								{
 									wylosowane_pole=wylosowane_pole+1;
-									sprawdzenie=tablica_trafionych_komp.some(function(itm)
+									sprawdzenie=tablica_strzalow_komp.some(function(itm)
 											{
 												return itm===wylosowane_pole;
 											});
@@ -119,8 +119,8 @@ $('.wave_show').click(function(){
 			}else
 			{
 			var wylosowane_pole= Math.floor(Math.random()*(max-min+1))+min;
-			tablica_trafionych_komp.sort();
-			var sprawdzenie=tablica_trafionych_komp.some(function(itm)
+			tablica_strzalow_komp.sort();
+			var sprawdzenie=tablica_strzalow_komp.some(function(itm)
 					{
 						return itm===wylosowane_pole;
 					});
@@ -129,11 +129,11 @@ $('.wave_show').click(function(){
 		while(sprawdzenie);
 		//}
 		
-		//alert("Elementy już w tablicy: "+tablica_trafionych_komp);
+		//alert("Elementy już w tablicy: "+tablica_strzalow_komp);
 		//alert("Wylosowany nr po sprawdzeniu w tablicy: "+wylosowane_pole);
 		var trafiony_font = $('#font'+wylosowane_pole);
-		tablica_trafionych_komp.push(wylosowane_pole);
-		tablica_trafionych_komp.sort();
+		tablica_strzalow_komp.push(wylosowane_pole);
+		tablica_strzalow_komp.sort();
 		
 		if(trafiony_font.children().hasClass('jedMasz'))
 		{
@@ -144,16 +144,16 @@ $('.wave_show').click(function(){
 				
 				switch(wylosowane_pole){
 				case 1:
-					tablica_trafionych_komp.push(wylosowane_pole+1,wylosowane_pole+10,wylosowane_pole+11);
+					tablica_strzalow_komp.push(wylosowane_pole+1,wylosowane_pole+10,wylosowane_pole+11);
 				break;
 				case 10:
-					tablica_trafionych_komp.push(wylosowane_pole-1,wylosowane_pole+10,wylosowane_pole+9);
+					tablica_strzalow_komp.push(wylosowane_pole-1,wylosowane_pole+10,wylosowane_pole+9);
 				break;
 				case 91:
-					tablica_trafionych_komp.push(wylosowane_pole+1,wylosowane_pole-9,wylosowane_pole-10);
+					tablica_strzalow_komp.push(wylosowane_pole+1,wylosowane_pole-9,wylosowane_pole-10);
 				break;
 				case 100:
-					tablica_trafionych_komp.push(wylosowane_pole-1,wylosowane_pole-10,wylosowane_pole-11);
+					tablica_strzalow_komp.push(wylosowane_pole-1,wylosowane_pole-10,wylosowane_pole-11);
 				break;
 				case 2:
 				case 3:
@@ -163,7 +163,7 @@ $('.wave_show').click(function(){
 				case 7:
 				case 8:
 				case 9:
-					tablica_trafionych_komp.push(wylosowane_pole+1,wylosowane_pole-1,wylosowane_pole+10,wylosowane_pole+9,wylosowane_pole+11);
+					tablica_strzalow_komp.push(wylosowane_pole+1,wylosowane_pole-1,wylosowane_pole+10,wylosowane_pole+9,wylosowane_pole+11);
 				break;
 				case 20:
 				case 30:
@@ -173,7 +173,7 @@ $('.wave_show').click(function(){
 				case 70:
 				case 80:
 				case 90:
-					tablica_trafionych_komp.push(wylosowane_pole-1,wylosowane_pole+10,wylosowane_pole-10,wylosowane_pole+9,wylosowane_pole-11);
+					tablica_strzalow_komp.push(wylosowane_pole-1,wylosowane_pole+10,wylosowane_pole-10,wylosowane_pole+9,wylosowane_pole-11);
 				break;
 				case 11:
 				case 21:
@@ -183,7 +183,7 @@ $('.wave_show').click(function(){
 				case 61:
 				case 71:
 				case 81:
-					tablica_trafionych_komp.push(wylosowane_pole+1,wylosowane_pole+10,wylosowane_pole-10,wylosowane_pole+11,wylosowane_pole-9);
+					tablica_strzalow_komp.push(wylosowane_pole+1,wylosowane_pole+10,wylosowane_pole-10,wylosowane_pole+11,wylosowane_pole-9);
 				break;
 				case 92:
 				case 93:
@@ -193,12 +193,12 @@ $('.wave_show').click(function(){
 				case 97:
 				case 98:
 				case 99:
-					tablica_trafionych_komp.push(wylosowane_pole+1,wylosowane_pole-1,wylosowane_pole-10,wylosowane_pole-9,wylosowane_pole-11);
+					tablica_strzalow_komp.push(wylosowane_pole+1,wylosowane_pole-1,wylosowane_pole-10,wylosowane_pole-9,wylosowane_pole-11);
 				default:
-					tablica_trafionych_komp.push(wylosowane_pole+1,wylosowane_pole-1,wylosowane_pole+10,wylosowane_pole-10,wylosowane_pole+9,wylosowane_pole+11,wylosowane_pole-9,wylosowane_pole-11);
+					tablica_strzalow_komp.push(wylosowane_pole+1,wylosowane_pole-1,wylosowane_pole+10,wylosowane_pole-10,wylosowane_pole+9,wylosowane_pole+11,wylosowane_pole-9,wylosowane_pole-11);
 			}
 
-				tablica_trafionych_komp.sort();
+				tablica_strzalow_komp.sort();
 		}
 		else if(trafiony_font.children().hasClass('dwuMasz'))
 		{

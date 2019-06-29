@@ -1,7 +1,7 @@
 var uchwytBtn61=document.getElementById("obracanie62");
 
 
-function obrot(){
+function obrot_pow(){
 
 	uchwyt61.style.width='200px';
 	uchwyt61.style.height='50px';
@@ -25,5 +25,5 @@ function obrot(){
 
 }
 
-uchwytBtn61.addEventListener("click",obrot);
+uchwytBtn61.addEventListener("click",obrot_pow);
 	
