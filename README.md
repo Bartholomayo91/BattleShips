@@ -16,7 +16,7 @@ Gracz otrzymuje do dyspozycji lacznie 10 statkow (4x jednomasztowiec, 3x dwumasz
 
    >Najciekawsze dotychczas zaimplementowane mechanizmy:
    >* tryb Gracz vs Gracz (na jednej maszynie).
-   >* tryb Gracz vs Komputer (w trakcie dopracowywania).
+   >* tryb Gracz vs Komputer (w trakcie dopracowywania, ale mozna juz zagrac).
    >* mozliwosc recznego lub automatycznego rozkladania statkow .
 
 
