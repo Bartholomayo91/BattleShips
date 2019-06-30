@@ -9,7 +9,7 @@ Gracz otrzymuje do dyspozycji lacznie 10 statkow (4x jednomasztowiec, 3x dwumasz
 
 
 
->**Wersja rozwojowa! Czyli jeszcze sporo do zrobienia/naprawienia/poprawienia.**
+>**Wersja rozwojowa! Jeszcze sporo do zrobienia/naprawienia/poprawienia. Ale zapalu nie brakuje!**
 #
 #
 
